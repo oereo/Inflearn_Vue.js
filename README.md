@@ -2,7 +2,8 @@
 
 Inflearn - Vue.js로 게임 만들기
 
-## clone 받기
+
+## Clone 받기
 
 * 터미널
 
@@ -10,6 +11,7 @@ Inflearn - Vue.js로 게임 만들기
 $ git clone https://github.com/oereo/Inflearn_Vue.js.git
 
 ```
+
 
 ## 강의내용
 
@@ -20,3 +22,5 @@ $ git clone https://github.com/oereo/Inflearn_Vue.js.git
 |1|첫강의|
 |2|구구단 - data, v-if, v-model, ref, 보간법|
 
+---
+(수정중)
