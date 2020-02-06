@@ -10,20 +10,42 @@
 </head>
 <body>
     <div id = "root">
-        <div>{{word}}</div>
+        <!-- <div>{{word}}</div>
         <form v-on:submit = "onSubmitForm">
             <input type = "text"  ref = "answer" v-model = "value">
             <button type = "submit">입력!</button>
         </form>
-        <div>{{result}}</div>
-    </div>
+        <div>{{result}}</div> -->
+        <word-relay start-word = "제로초"></word-relay> 
+        <word-relay start-word = "초밥"></word-relay>
+        <word-relay start-word = "바보"></word-relay>
+        <!-- 중복을 피하기 위해서 component로 바꾸어줌 -->
+        </div>
     <script>
-        const app = new Vue({
-            el: '#root',
-            data :{
-                word : '제로초',
-                result: '',
-                value: '',
+        Vue.component('word-relay', { // 전역 컴포넌트
+            // template 의 규칙은 동등한 위치의 태그를 하나의 부모태그로 묶어주기
+            template: ` 
+            <div>
+                <div>{{word}}</div>
+                    <form v-on:submit = "onSubmitForm">
+                        <input type = "text"  ref = "answer" v-model = "value">
+                        <button type = "submit">입력!</button>
+                    </form>
+                <div>{{result}}</div>
+            </div>
+            
+            `,
+
+            props: ['startWord'], // 공통된 부분 외에 바뀌는 다른 부분들을 할때
+
+            data() {
+                return{
+
+                    word : this.startWord,
+                    result: '',
+                    value: '',
+                }
+               
             },
             methods: {
                 onSubmitForm(e){
@@ -39,7 +61,33 @@
                         this.$refs.answer.focus();
                     }
                 },
-            }, 
+            }
+        })
+    </script>
+
+    <script>
+        const app = new Vue({
+            el: '#root',
+            // data :{
+            //     word : '제로초',
+            //     result: '',
+            //     value: '',
+            // },
+            // methods: {
+            //     onSubmitForm(e){
+            //         e.preventDefault();
+            //         if(this.word[this.word.length -1] === this.value[0]){
+            //             this.result = '딩동댕';
+            //             this.word = this.value;
+            //             this.value = '';
+            //             this.$refs.answer.focus();
+            //         }else{
+            //             this.result = '땡';
+            //             this.value = '';
+            //             this.$refs.answer.focus();
+            //         }
+            //     },
+            // }, 
         })
     </script>
 
