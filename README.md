@@ -21,6 +21,7 @@ $ git clone https://github.com/oereo/Inflearn_Vue.js.git
 |------|---|
 |1|첫강의|
 |2|구구단 - data, v-if, v-model, ref, 보간법|
+|3|숫자야구 - webpack, vue-loader, vue-template, v-for, build|
 
 ---
 (수정중)
