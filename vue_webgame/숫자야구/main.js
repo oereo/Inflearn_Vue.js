@@ -1,4 +1,6 @@
 import Vue from 'vue';
 
-new Vue().$mount('#root'); // el 역할을 함.
+import numberBaseball from './numberBaseball.vue';
+
+new Vue(numberBaseball).$mount('#root'); // el 역할을 함.
 // vue instance
