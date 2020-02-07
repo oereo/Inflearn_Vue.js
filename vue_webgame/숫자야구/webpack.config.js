@@ -2,10 +2,15 @@ module.exports = {
     entry: {
         app: './main.js', // 주가 되는 script
     },
-    module: {},
+    module: {
+        rules: [{
+
+        }],
+    }, //webpack 의 핵심
     plugins: {},
     output: {
-        filename: '[name].js'
+        filename: '[name].js', //또는 app.js
+        path: './dist',
     },
 };
 
