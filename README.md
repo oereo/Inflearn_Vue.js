@@ -15,6 +15,7 @@ $ git clone https://github.com/oereo/Inflearn_Vue.js.git
 
 ## 강의내용
 
+* 제로초님 강의 '웹 게임을 만들며 배우는 Vue'
 * 총 9개의 파트로 나누어집니다.
 
 |목차 |내용|
