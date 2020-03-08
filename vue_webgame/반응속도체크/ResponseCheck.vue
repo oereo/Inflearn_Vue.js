@@ -1,9 +1,9 @@
 <template>
     <div>
-        <div id = "screen"></div>
+        <div id = "screen">{{message}}</div>
         <div>
             <div>평균시간 : {{}}</div>
-            <button>리셋</button>
+            <button v-on:click = "inReset">리셋</button>
         </div>
     </div>
 </template>
@@ -13,13 +13,15 @@
 export default {
   data() {
       return {
-          
+          result: [],
+          state: 'waiting',
+          message: '클릭해서 시작하세요.',
       }
   },
   methods: {
-      
-         
-      
+      onReset(){
+
+      }
   } 
 };
 </script>
